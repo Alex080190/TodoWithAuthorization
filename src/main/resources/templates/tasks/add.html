@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+</head>
+<body>
+<form method="post" action="/tasks/add" >
+  <label for="description">Введите Описание</label>
+  <input type="text" name="description" id="description"/>
+  <br/>
+  <label for="completed">Завершено? (введите да или нет)</label>
+    <input type="text" name="completed" id="completed"/>
+  <br/>
+  <input type="submit" value="Add"/>
+</form>
+</body>
+</html>

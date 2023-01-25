@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All tasks</title>
+</head>
+<body>
+    <th:block th:each="task: ${tasks}">
+        <table>
+            <tr>
+                <td th:text="${task.getId()}"></td>
+                <td th:text="${task.getDescription()}"></td>
+                <td th:text="${task.isCompleted()}"></td>
+            </tr>
+        </table>
+    </th:block>
+    <a href="add">Add task</a>
+    <br/>
+    <a href="edit">Update task</a>
+    <br/>
+    <a href="delete">Delete task</a>
+    <br/>
+    <form th:action="@{/logout}" th:method="POST">
+        <input type="submit" value="Logout" />
+    </form>
+
+</body>
+</html>
